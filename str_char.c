@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/04 05:05:35 by akhalid           #+#    #+#             */
-/*   Updated: 2020/01/07 22:26:24 by akhalid          ###   ########.fr       */
+/*   Updated: 2020/01/08 14:25:06 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	printf_parse(t_args *args)
 {
 	ZERO = PRECISION < 0 ? 0 : ZERO;
-	LEN = (PRECISION < LEN && IFPREC == 1) ? PRECISION : LEN;
+	LEN = (PRECISION < LEN && IFPREC == 1 && PRECISION >= 0) ? PRECISION : LEN;
 	WIDTH = WIDTH < 0 && CONV == 'c' ? WIDTH * -1 : WIDTH;
-	WIDTH = (PRECISION < 0) ? PRECISION * -1 : WIDTH - LEN;
+	WIDTH = (PRECISION < 0 && IFPREC == 0) ? PRECISION * -1 : WIDTH - LEN;
 	WIDTH = (CONV == 'c' && PRECISION < 0) ? (PRECISION * -1) - 1 : WIDTH;
 	MINUS = (CONV == 'c' && PRECISION < 0) ? 1 : MINUS;
 	if (IFPREC == 1 && PRECISION == 0 && CONV == 'c')
@@ -34,6 +34,7 @@ void	print_string(t_args *args, va_list pa)
 	printf_parse(args);
 	while (MINUS == 0 && WIDTH-- > 0)
 		ZERO == 1 ? ft_putcharpr('0', args) : ft_putcharpr(' ', args);
+	WIDTH = WIDTH < 0 ? WIDTH * -1 - 2 * LEN - 1 : WIDTH;
 	while (LEN-- > 0 && *str != '\0')
 		ft_putcharpr(*str++, args);
 	while (WIDTH-- > 0)

@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/04 04:14:47 by akhalid           #+#    #+#             */
-/*   Updated: 2020/01/04 05:27:00 by akhalid          ###   ########.fr       */
+/*   Updated: 2020/01/08 20:19:33 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	parse_unsigned_int(t_args *args)
 {
 	MINUS = PRECISION < 0 ? 1 : MINUS;
 	WIDTH = (PRECISION < 0) ? PRECISION * -1 : WIDTH;
-	PRECISION -= MINUS;
 	WIDTH -= PRECISION > 0 ? PRECISION + LEN : LEN;
 	ZERO = IFPREC == 1 ? 0 : ZERO;
 }
@@ -30,8 +29,7 @@ void	print_unsigned_int(t_args *args, va_list pa)
 	print = convert(args, nb);
 	LEN = nb == 0 ? 0 : ft_strlen(print);
 	parse_unsigned_int(args);
-	if (MINUS <= 0 && WIDTH <= 0 && PRECISION <= 0 &&
-			IFPREC <= 0 && ZERO <= 0)
+	if (MINUS <= 0 && WIDTH <= 0 && PRECISION <= 0 && IFPREC <= 0 && ZERO <= 0)
 		ft_putstrpr(print, args);
 	if (MINUS == 0)
 		while (WIDTH-- > 0)
@@ -40,5 +38,7 @@ void	print_unsigned_int(t_args *args, va_list pa)
 		ft_putcharpr('0', args);
 	while (WIDTH-- > 0)
 		ft_putcharpr(' ', args);
+	if ((MINUS > 0 || WIDTH > 0 || PRECISION > 0 || IFPREC > 0 || ZERO > 0) && LEN > 0)
+		ft_putstrpr(print, args);
 	free(print);
 }
