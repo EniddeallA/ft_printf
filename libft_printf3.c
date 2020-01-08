@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/04 04:15:46 by akhalid           #+#    #+#             */
-/*   Updated: 2020/01/04 07:20:06 by akhalid          ###   ########.fr       */
+/*   Updated: 2020/01/07 21:14:45 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,10 +78,10 @@ char	*ft_convert_hex(unsigned long int nb, int type)
 	return (ft_strrev(print));
 }
 
-char	*ft_itoa(int nbr)
+char	*ft_itoa(long int nbr)
 {
-	int			sign;
-	int			count;
+	long		sign;
+	long		count;
 	char		*str;
 
 	count = 1;

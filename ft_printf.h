@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/07 00:50:33 by akhalid           #+#    #+#             */
-/*   Updated: 2020/01/06 06:52:34 by akhalid          ###   ########.fr       */
+/*   Updated: 2020/01/07 21:11:07 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void				*ft_bzero(size_t size);
 void				*ft_memset(void *str, int c, size_t size);
 char				*ft_strrev(char *str);
 char				*ft_strnew(size_t size);
-char				*ft_itoa(int nbr);
+char				*ft_itoa(long int nbr);
 long	long	int	assign_value(t_args *args, va_list pa);
 void				ft_putstrpr(char *s, t_args *args);
 int					ft_strcmp(char *s1, char *s2);

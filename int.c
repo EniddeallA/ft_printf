@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/04 04:16:23 by akhalid           #+#    #+#             */
-/*   Updated: 2020/01/04 05:27:20 by akhalid          ###   ########.fr       */
+/*   Updated: 2020/01/07 20:59:54 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	parse_int(t_args *args, long int nb)
 	PRECISION = PRECISION < 0 && STAR == 0 ? PRECISION * -1 : PRECISION;
 	PRECISION -= LEN;
 	WIDTH -= PRECISION > 0 ? PRECISION + LEN : LEN;
+	WIDTH = nb < 0 ? WIDTH - 1 : WIDTH;
 	ZERO = (IFPREC == 1) && STAR == 0 ? 0 : ZERO;
 }
 
@@ -33,8 +34,18 @@ void	print_int(t_args *args, va_list pa)
 
 	nb = assign_value(args, pa);
 	parse_int(args, nb);
+	if (nb < 0 && ZERO == 1)
+	{
+		ft_putcharpr('-', args);
+		nb *= -1;
+	}
 	while (MINUS == 0 && WIDTH-- > 0)
 		ZERO == 1 ? ft_putcharpr('0', args) : ft_putcharpr(' ', args);
+	if (nb < 0 && PRECISION > 0)
+	{
+		ft_putcharpr('-', args);
+		nb *= -1;
+	}
 	while (PRECISION-- > 0)
 		ft_putcharpr('0', args);
 	if ((LEN > 0) || (nb == 0 && IFPREC == 0))
