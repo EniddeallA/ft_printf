@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/07 00:50:33 by akhalid           #+#    #+#             */
-/*   Updated: 2020/01/07 21:11:07 by akhalid          ###   ########.fr       */
+/*   Updated: 2020/01/17 12:12:44 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 # define RES args->res
 # define LEN args->len
 
-typedef	struct	s_args
+typedef	struct		s_args
 {
 	int		minus;
 	int		zero;
@@ -41,7 +41,7 @@ typedef	struct	s_args
 	int		precision;
 	int		res;
 	int		len;
-}				t_args;
+}					t_args;
 
 int					ft_printf(const char *format, ...);
 int					printf_(char *format, va_list pa);
