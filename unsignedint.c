@@ -6,7 +6,7 @@
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/04 04:14:47 by akhalid           #+#    #+#             */
-/*   Updated: 2020/01/17 11:36:35 by akhalid          ###   ########.fr       */
+/*   Updated: 2020/01/17 12:00:37 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	parse_unsigned_int(t_args *args)
 
 void	print_unsigned_int(t_args *args, va_list pa)
 {
-	unsigned long long int	nb;
-	char					*print;
+	unsigned	long	long	int	nb;
+	char							*print;
 
 	nb = assign_value(args, pa);
 	print = convert(args, nb);
