@@ -6,11 +6,11 @@
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/04 04:15:46 by akhalid           #+#    #+#             */
-/*   Updated: 2020/01/07 21:14:45 by akhalid          ###   ########.fr       */
+/*   Updated: 2020/01/20 08:45:35 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf/ft_printf.h"
 
 char	*ft_strrev(char *str)
 {

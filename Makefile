@@ -6,7 +6,7 @@
 #    By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/13 23:34:38 by akhalid           #+#    #+#              #
-#    Updated: 2020/01/17 12:06:31 by akhalid          ###   ########.fr        #
+#    Updated: 2020/01/20 08:47:28 by akhalid          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,16 +16,16 @@ RM = rm -rf
 
 NAME = libftprintf.a
 
-SRCS =	ft_printf.c		\
-		format_handler.c	\
-		libft_printf1.c	\
-		libft_printf2.c	\
-		libft_printf3.c	\
-		int.c			\
-		unsignedint.c	\
-		str_char.c		\
-		pointer.c		\
-		tools.c			\
+SRCS =	ft_printf/ft_printf.c				\
+		ft_printf/format_handler.c			\
+		ft_libft/libft_printf1.c			\
+		ft_libft/libft_printf2.c			\
+		ft_libft/libft_printf3.c			\
+		convertion_Parsers/int.c			\
+		convertion_Parsers/unsignedint.c	\
+		convertion_Parsers/str_char.c		\
+		convertion_Parsers/pointer.c		\
+		convertion_Parsers/tools.c			\
 		
 OBJS = -Wall -Wextra -Werror -c
 

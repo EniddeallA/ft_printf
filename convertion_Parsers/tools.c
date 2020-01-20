@@ -6,11 +6,11 @@
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/04 04:19:46 by akhalid           #+#    #+#             */
-/*   Updated: 2020/01/04 07:29:07 by akhalid          ###   ########.fr       */
+/*   Updated: 2020/01/20 08:46:47 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf/ft_printf.h"
 
 void				print(int start, int i, char *format)
 {

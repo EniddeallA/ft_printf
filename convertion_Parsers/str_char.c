@@ -6,11 +6,11 @@
 /*   By: akhalid <akhalid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/04 05:05:35 by akhalid           #+#    #+#             */
-/*   Updated: 2020/01/08 14:25:06 by akhalid          ###   ########.fr       */
+/*   Updated: 2020/01/20 08:46:36 by akhalid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf/ft_printf.h"
 
 void	printf_parse(t_args *args)
 {
